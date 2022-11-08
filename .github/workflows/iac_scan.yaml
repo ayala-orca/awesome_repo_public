@@ -18,8 +18,8 @@ jobs:
         uses: orcasecurity/shiftleft-iac-action@v1
         with:
           api_token: ${{ secrets.ORCA_SECURITY_API_TOKEN }}
-          project_key: ${{ env.PROJECT_KEY }}
-          path: <path to scan>
+          project_key: project_key
+          path: test
           format: "sarif"
           output:
             "results/"
