@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: ls -l ${GITHUB_EVENT_PATH}
       - run: cat ${GITHUB_EVENT_PATH}
       - name: Run Orca IaC Scan
         uses: orcasecurity/shiftleft-iac-action@v1
